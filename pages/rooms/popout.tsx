@@ -1,3 +1,5 @@
+"use client";
+
 const PopOutWindow = () => {
     const handlePicInPic = async () => {
       // console.log('handlePicInPic ');
@@ -173,7 +175,7 @@ const PopOutWindow = () => {
   
     return (
       <>
-        {'documentPictureInPicture' in window ? (
+        {typeof window !== "undefined" && 'documentPictureInPicture' in window ? (
           <div className="dark-mode mt-1">
             <button onClick={handlePicInPic}>
               <div className="moon w-8 h-8 rounded-full flex items-center justify-center">
